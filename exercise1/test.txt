@@ -1,0 +1,8 @@
+c
+[L =,[a,c,d],X =,b]
+true
+[5,23]
+true  true  true
+true  fail  true
+fail  true  fail
+fail  fail  fail
