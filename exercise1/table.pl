@@ -16,9 +16,13 @@ xor(fail, fail, fail).
 nand(A, B, R) :- and(A, B, T), not(T, R).
 nor(A, B, R) :- or(A, B, T), not(T, R).
 
-% Recursion
+% Recursive evaluation
+
+% If the expression is already true or fail, stop searching and return it
 evaluate(true, true) :- !.
 evaluate(fail, fail) :- !.
+
+% Evaluate expression parts and then apply the gate
 evaluate(and(A, B), R) :- !, evaluate(A, RA), evaluate(B, RB), and(RA, RB, R).
 evaluate(or(A, B), R) :- !, evaluate(A, RA), evaluate(B, RB), or(RA, RB, R).
 evaluate(not(A), R) :- !, evaluate(A, RA), not(RA, R).
@@ -31,6 +35,8 @@ evaluate(equal(A, B), R) :- !, evaluate(A, RA), evaluate(B, RB), equal(RA, RB, R
 table(A, B, Expr) :-
     bind(A),
     bind(B),
+
+    % Calculate the result for the current A, B
     evaluate(Expr, Result),
 
     % If it is the last line of the table, do not add new line
