@@ -1,4 +1,4 @@
-% check if N is even and greater than 2, then find the pair.
+% Check if N is even and greater than 2, then find the pair
 goldbach(N, [P1, P2]) :-
     N > 2,
     N mod 2 =:= 0,
@@ -34,3 +34,4 @@ has_divisor(N, D) :-
     D * D < N,
     New_D is D + 2,
     has_divisor(N, New_D).
+    
