@@ -18,13 +18,11 @@ table(A, B, Expr) :-
     bool(B),
     (Expr -> Result = true ; Result = fail),
     
+    % Print table to screen
     write(A), write('  '), 
     write(B), write('  '), 
     write(Result),
-    
-    % If it is the last line, do not add new line
-    ( (A == fail, B == fail) -> true ; nl ),
-    
+    nl,
     fail.
 
 table(_, _, _).
