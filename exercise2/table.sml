@@ -7,7 +7,7 @@ datatype expr = Var of string
 (* Evaluate the expression given environment and variable s *)
 fun evaluate (Var s) env =
     let 
-        fun find ((name, v)::ts) = if name = s then v else find ts
+        fun find ((name, v)::rest) = if name = s then v else find rest
           | find [] = false     (* If s was not found, return false as default *)
     in 
         find env 
