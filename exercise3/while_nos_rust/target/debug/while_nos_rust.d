@@ -1,0 +1,1 @@
+/home/yarde/Programming-languages/exercise3/while_nos_rust/target/debug/while_nos_rust: /home/yarde/Programming-languages/exercise3/while_nos_rust/src/ast.rs /home/yarde/Programming-languages/exercise3/while_nos_rust/src/main.rs /home/yarde/Programming-languages/exercise3/while_nos_rust/src/nos.rs /home/yarde/Programming-languages/exercise3/while_nos_rust/src/semantics.rs

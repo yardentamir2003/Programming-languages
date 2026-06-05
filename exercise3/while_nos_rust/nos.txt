@@ -1,0 +1,13 @@
+--- Running Test Cases in Rust ---
+Test test1 - x = 1
+Test test2 - x = 4
+Test test3 - x = 7
+Test test4 - x = 0
+Test test4 - y = 120
+Test test5 - a = 2688
+Test test5 - b = 0
+Test test5 - c = 0
+Test test6 - x = 40
+Test test6 - y = 5
+Test test7 - c = 6
+Test test8 - x = 0
